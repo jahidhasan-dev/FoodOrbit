@@ -1,11 +1,12 @@
+<p align="center">
+  <img src="./foodorbitLogo.png" width="200" />
+</p>
+
 # 🍔 FoodOrbit
 
 FoodOrbit is a full-featured **food delivery platform** that enables restaurants, customers, and delivery personnel to interact seamlessly in real-time. It supports live order tracking, service-based features, and scalable event-driven architecture.
 
 ---
-<p align="center">
-  <img src="./foodorbitLogo.png" width="200" />
-</p>
 
 ## 🚀 Features
 
