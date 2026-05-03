@@ -28,9 +28,19 @@ export const isAuth = async(req: AuthenticatedRequest, res:Response, next: NextF
 
         const decodedValue = jwt.verify(token, process.env.JWT_SEC as string) as JwtPayload;
 
+        if(!decodedValue || !decodedValue.user){
+            res.status(401).json({
+                message: "Invalid Token",
+            });
+            return;
+        }
 
+        req.user = decodedValue.user;
+        next();
     } catch (error) {
-        
+        res.status(500).json({
+            message: `Please Login - JWT error ${error}`,
+        });
     }
-}
+};
 
